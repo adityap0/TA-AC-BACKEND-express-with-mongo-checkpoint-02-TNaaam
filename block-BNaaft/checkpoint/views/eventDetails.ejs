@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header class="event-details-page">
+      <h1>This is Event Details Page!</h1>
+      <a href="/events"><button>Back</button></a>
+    </header>
+    <div class="event-details-page container">
+      <div class="remarks">
+        <div>
+          <form
+            class="remark-form"
+            action="/events/<%= event._id%>/remarks"
+            method="POST"
+          >
+            <textarea
+              name="title"
+              rows="4"
+              placeholder="Post a Comment..."
+              required="true"
+            ></textarea>
+            <input
+              type="text"
+              name="author"
+              placeholder="Enter Name"
+              required="true"
+            />
+            <button type="submit">POST</button>
+          </form>
+          <div class="scroll">
+            <ul>
+              <% event.remarks.reverse().forEach((remark)=>{%>
+              <li>
+                <div class="remark-ctrl">
+                  <cite><%= remark.author%> (likes : <%= remark.likes%>) </cite>
+                  <a href="/remarks/<%= remark._id%>/edit"
+                    ><button>🖊</button></a
+                  >
+                  <a href="/remarks/<%= remark._id%>/delete"
+                    ><button>🗑</button></a
+                  >
+                  <a href="/remarks/<%= remark._id%>/like/+"
+                    ><button>😍</button></a
+                  >
+                  <a href="/remarks/<%= remark._id%>/like/-"
+                    ><button>🤯</button></a
+                  >
+                  <p><%= remark.title%></p>
+                </div>
+              </li>
+              <%})%>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="event-details">
+        <div>
+          <div class="details-ctrl">
+            <h2>TITLE:</h2>
+            <p><%= event.title%></p>
+          </div>
+          <div class="details-ctrl">
+            <h2>SUMMARY:</h2>
+            <p><%= event.summary%></p>
+          </div>
+          <div class="details-ctrl">
+            <h2>HOST:</h2>
+            <p><%= event.host%></p>
+          </div>
+          <div class="details-ctrl">
+            <h2>START:</h2>
+            <p><%= event.start_date%></p>
+          </div>
+          <div class="details-ctrl">
+            <h2>END:</h2>
+            <p><%= event.end_date%></p>
+          </div>
+          <div class="details-ctrl">
+            <h2>CATEGORY:</h2>
+            <%event.event_category.forEach((c)=>{%>
+            <p><%= c.toUpperCase() %></p>
+            <%})%>
+          </div>
+          <div class="details-ctrl">
+            <h2>LOCATION:</h2>
+            <p><%= event.location%></p>
+          </div>
+          <div class="details-ctrl">
+            <h2>LIKES:</h2>
+            <p><%= event.likes%></p>
+          </div>
+          <div class="details-ctrl">
+            <a href="/events/<%= event._id%>/edit"><button>🖊</button></a>
+            <a href="/events/<%= event._id%>/delete"><button>🗑</button></a>
+            <a href="/events/<%= event._id%>/likes/+"><button>😍</button></a>
+            <a href="/events/<%= event._id%>/likes/-"><button>🤯</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
