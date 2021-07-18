@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="add-event container">
+      <h1>Please add the event you want!</h1>
+      <a href="/events"><button>Back</button></a>
+      <form class="new-event-form" action="/events/new" method="POST">
+        <input
+          type="text"
+          name="title"
+          required="true"
+          placeholder="Enter Title"
+        />
+        <textarea
+          name="summary"
+          rows="4"
+          placeholder="Enter Summary"
+        ></textarea>
+        <input
+          type="text"
+          name="host"
+          required="true"
+          placeholder="Enter Host"
+        />
+        <input
+          type="date"
+          name="start_date"
+          required="true"
+          placeholder="Enter Start Date"
+        />
+        <input
+          type="date"
+          name="end_date"
+          required="true"
+          placeholder="Enter End Date"
+        />
+        <select name="event_category" multiple>
+          <option value="comedy">COMEDY</option>
+          <option value="thirller">THRILLER</option>
+          <option value="action">ACTION</option>
+          <option value="adventure">ADVENTURE</option>
+          <option value="crime">CRIME</option>
+        </select>
+        <input
+          type="text"
+          name="location"
+          required="true"
+          placeholder="Enter Location"
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
