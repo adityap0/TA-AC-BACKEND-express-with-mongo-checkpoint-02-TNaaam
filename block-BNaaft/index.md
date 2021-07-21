@@ -34,8 +34,6 @@ Create an event management website using express & mongoDB where users visiting 
 9. Templates available on the website will be -
 
 - Each page should have a header & footer
-  <%-include('your-path')%>
-  <%- partial('footer') %>
 
 - Home page
 

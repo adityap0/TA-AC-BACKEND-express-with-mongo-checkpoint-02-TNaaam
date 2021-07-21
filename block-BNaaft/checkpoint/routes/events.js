@@ -9,13 +9,20 @@ let Remarks = require("../models/remark");
 router.get("/", (req, res, next) => {
   Events.find({}, (error, events) => {
     if (error) return next(error);
-    console.log(events);
     res.render("eventsPage", { events });
   });
 });
 //add new Event
 router.get("/new", (req, res, next) => {
   res.render("addEvent");
+});
+router.get("/search/:category", (req, res, next) => {
+  let category = req.params.category.toLowerCase();
+  console.log(category);
+  Events.find({ event_category: { $all: category } }, (error, events) => {
+    if (error) return next(error);
+    res.render("eventsPage", { events });
+  });
 });
 router.post("/new", (req, res, next) => {
   Events.create(req.body, (error, createdEvent) => {
