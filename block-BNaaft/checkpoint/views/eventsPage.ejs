@@ -16,12 +16,38 @@
     </header>
     <main>
       <div class="event-list container">
-        <h1>List of all Events...</h1>
-        <ul>
-          <%events.forEach((event)=>{%>
-          <li><a href="/events/<%= event._id%>"><%= event.title%></a></li>
-          <%})%>
-        </ul>
+        <div class="filter-event">
+          <div>
+            <ul>
+              <h1>Filter events...</h1>
+              <li>
+                <a href="/events/search/programming"
+                  ><button>PROGRAMMING</button></a
+                >
+              </li>
+              <li>
+                <a href="/events/search/sports"><button>SPORTS</button></a>
+              </li>
+              <li>
+                <a href="/events/search/trekking"><button>TREKKING</button></a>
+              </li>
+              <li>
+                <a href="/events/search/movies"><button>MOVIES</button></a>
+              </li>
+              <li>
+                <a href="/events/"><button>❌ REMOVE ❌</button></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="all-events">
+          <h1>Events</h1>
+          <ul>
+            <%events.forEach((event)=>{%>
+            <li><a href="/events/<%= event._id%>"><%= event.title%></a></li>
+            <%})%>
+          </ul>
+        </div>
       </div>
     </main>
   </body>

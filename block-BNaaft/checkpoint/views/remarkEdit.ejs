@@ -17,7 +17,7 @@
         <% event.remarks.forEach((remark)=>{%> <%if(remark._id == remarkid){%>
         <form
           class="remark-form"
-          action="/events/<%= event._id%>/remarks"
+          action="/remarks/<%= remark._id%>/edit"
           method="POST"
         >
           <textarea name="title" rows="4" required="true">

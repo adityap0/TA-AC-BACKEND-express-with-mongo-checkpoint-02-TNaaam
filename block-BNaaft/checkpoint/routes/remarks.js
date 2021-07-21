@@ -12,8 +12,16 @@ router.get("/:id/edit", (req, res, next) => {
       .populate("remarks")
       .exec((error, event) => {
         if (error) return next(error);
-        res.render("eventDetailsEditRemark", { event, remarkid });
+        res.render("remarkEdit", { event, remarkid });
       });
+  });
+});
+router.post("/:id/edit", (req, res, next) => {
+  let remarkid = req.params.id;
+  Remark.findByIdAndUpdate(remarkid, req.body, (error, remark) => {
+    let eventId = remark.eventId;
+    if (error) next(error);
+    res.redirect("/events/" + eventId);
   });
 });
 

@@ -194,9 +194,6 @@ main div ul li a {
   cursor: pointer;
   padding: 10px 0;
 }
-.event-list {
-  margin: 40px 0;
-}
 
 /*event-details-page */
 .event-details-page {
@@ -218,9 +215,7 @@ main div ul li a {
   padding: 18px;
   display: flex;
   flex-direction: column;
-
   justify-content: space-between;
-
   width: 48%;
 }
 .details-ctrl {
@@ -271,4 +266,26 @@ main div ul li a {
   height: 300px;
   overflow-y: auto;
   text-align: left;
+}
+.event-list {
+  width: 40%;
+
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+}
+.filter-event {
+  width: 48%;
+}
+.filter-event h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  text-decoration: none;
+}
+.filter-event button {
+  cursor: pointer;
+}
+.all-events {
+  width: 48%;
 }
