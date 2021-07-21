@@ -1,0 +1,291 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ff;
+}
+/* page container */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px;
+  width: 100%;
+}
+/* eventsPage */
+header div h1 {
+  text-align: center;
+  font-size: 32px;
+  position: relative;
+  text-decoration: underline;
+}
+header div a {
+  position: absolute;
+  right: 50px;
+}
+header div a button {
+  font-size: 22px;
+  cursor: pointer;
+}
+main div ul h1 {
+  padding: 20px;
+  font-size: 26px;
+  text-decoration: underline;
+}
+main div ul li {
+  padding: 10px 0;
+}
+main div ul li a {
+  font-size: 20px;
+}
+/* Add Event Page */
+.add-event h1 {
+  font-size: 22px;
+  text-align: center;
+}
+.new-event-form {
+  width: 70%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+.new-event-form select {
+  width: 100%;
+  border: 1px solid coral;
+  padding: 20px 0 20px 20px;
+}
+.new-event-form select option {
+  font-size: 18px;
+}
+.new-event-form textarea {
+  padding: 10px;
+}
+.new-event-form input {
+  margin: 10px 0;
+  padding: 10px;
+}
+.new-event-form button {
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+/*event-details-page */
+.event-details-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.remarks {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+.event-details-page h1 {
+  margin: 0 auto;
+  text-decoration: underline;
+  font-size: 32px;
+}
+.event-details {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 48%;
+}
+.details-ctrl {
+  margin: 10px 0;
+  padding: 10px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.details-ctrl h2 {
+  width: 50%;
+  text-decoration: underline;
+}
+.details-ctrl button {
+  background-color: white;
+  border: 0;
+  cursor: pointer;
+  font-size: 28px;
+}
+.remark-form {
+  width: 60%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+.remark-form button {
+  padding: 5px 0;
+  cursor: pointer;
+}
+.remark-form textarea {
+  border: 0;
+}
+.remark-form input {
+  border: 0;
+}
+.remark-form button {
+  border: 2px solid cornflowerblue;
+  background-color: white;
+  width: 20%;
+  margin: 20px 0;
+}
+.remark-ctrl p {
+  padding: 10px 0;
+  margin: 20px;
+}
+.scroll {
+  width: 90%;
+  height: 300px;
+  overflow-y: auto;
+  text-align: left;
+}
+.event-list {
+  width: 40%;
+
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+}
+.filter-event {
+  width: 48%;
+}
+.filter-event h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  text-decoration: none;
+}
+.filter-event button {
+  cursor: pointer;
+}
+.all-events {
+  width: 48%;
+}

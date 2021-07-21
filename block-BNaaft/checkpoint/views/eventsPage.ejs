@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>EVENTS PAGE</h1>
+        <a href="/events/new"><button>+ Add Event</button></a>
+      </div>
+    </header>
+    <main>
+      <div class="event-list container">
+        <div class="filter-event">
+          <div>
+            <ul>
+              <h1>Filter events...</h1>
+              <li>
+                <a href="/events/search/programming"
+                  ><button>PROGRAMMING</button></a
+                >
+              </li>
+              <li>
+                <a href="/events/search/sports"><button>SPORTS</button></a>
+              </li>
+              <li>
+                <a href="/events/search/trekking"><button>TREKKING</button></a>
+              </li>
+              <li>
+                <a href="/events/search/movies"><button>MOVIES</button></a>
+              </li>
+              <li>
+                <a href="/events/"><button>❌ REMOVE ❌</button></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="all-events">
+          <h1>Events</h1>
+          <ul>
+            <%events.forEach((event)=>{%>
+            <li><a href="/events/<%= event._id%>"><%= event.title%></a></li>
+            <%})%>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
